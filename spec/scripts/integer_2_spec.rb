@@ -17,7 +17,7 @@ describe "integer_odd.rb" do
 end
 
 describe "integer_birth_year.rb" do
-  it "should output 'Wow, you were born in 1943. You're old!' if the input is 80.", points: 1 do
+  it "should output 'Wow, you were born in #{Date.today.year - 80}. You're old!' if the input is 80.", points: 1 do
 
     allow_any_instance_of(Object).to receive(:gets).and_return("80")
     year = Date.today.year - 80

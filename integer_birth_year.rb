@@ -6,7 +6,7 @@
 # Input:
 #   80
 # 
-# Key output:
-#   "Wow, you were born in 1943. You're old!"
+# Key output (assuming the current year is 2023): 
+# "Wow, you were born in 1943. You're old!"
 
 p "How old are you?"

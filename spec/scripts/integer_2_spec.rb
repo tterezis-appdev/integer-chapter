@@ -31,7 +31,7 @@ describe "integer_birth_year.rb" do
 end
 
 describe "integer_birth_year.rb" do
-  it "should output 'Wow, you were born in 2003. You're old!' if the input is 20.", points: 1 do
+  it "should output 'Wow, you were born in #{Date.today.year - 20}. You're old!' if the input is 20.", points: 1 do
     # Un-require integer_birth_year.rb
     integer_birth_year = $".select{|r| r.include? 'integer_birth_year.rb'}
     $".delete(integer_birth_year.first)

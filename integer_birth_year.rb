@@ -7,6 +7,8 @@
 #   80
 #   "Wow, you were born in 1943. You're old!"
 #
-# Use the same copy ("Wow...You're old!") as above in the output.
+# Use exactly the same copy ("Wow, you were born...") as above in the output.
+# but replace values using string addition or string interpolation.
+
 
 p "How old are you?"

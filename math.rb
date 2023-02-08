@@ -5,7 +5,6 @@
 
 days_in_year = 365
 
-p days_in_year%7
 
 # ~~~~~ Specs (make it do these things) ~~~~~
 #

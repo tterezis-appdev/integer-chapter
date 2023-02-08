@@ -5,8 +5,10 @@ describe "math.rb" do
     file_contents = File.read(math_file)
     File.foreach(math_file).with_index do |line, line_num|
       if line.include?("p") || line.include?("puts")
-        expect(line).to_not match(/1/i),
-          "Expected 'math.rb' to NOT literally print '1', but did anyway."
+        unless line.include?("#")
+          expect(line).to_not match(/1/i),
+            "Expected 'math.rb' to NOT literally print '1', but did anyway."
+        end
       end
     end
     output = with_captured_stdout { require_relative('../../math')} 

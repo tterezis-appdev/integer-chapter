@@ -1,14 +1,14 @@
 require "date"
 
-describe "integer_odd.rb" do
+describe "odd.rb" do
   it "should output 'false' if the entered number is not odd", points: 1 do
-    # Un-require integer_odd.rb
-    integer_odd = $".select{|r| r.include? 'integer_odd.rb'}
-    $".delete(integer_odd.first)
+    # Un-require odd.rb
+    odd = $".select{|r| r.include? 'odd.rb'}
+    $".delete(odd.first)
     
     allow_any_instance_of(Object).to receive(:gets).and_return("12")
 
-    output = with_captured_stdout { require_relative('../../integer_odd')} 
+    output = with_captured_stdout { require_relative('../../odd')} 
     output = "empty" if output.empty? 
     expect(output.match?(/false/i)).to be(true),
       "Expected output to be 'Enter an odd number:\\nfalse', but was #{output}."
@@ -16,13 +16,13 @@ describe "integer_odd.rb" do
   end
 end
 
-describe "integer_birth_year.rb" do
+describe "birth_year.rb" do
   it "should output 'Wow, you were born in #{Date.today.year - 80}. You're old!' if the input is 80.", points: 1 do
 
     allow_any_instance_of(Object).to receive(:gets).and_return("80")
     year = Date.today.year - 80
 
-    output = with_captured_stdout { require_relative('../../integer_birth_year')} 
+    output = with_captured_stdout { require_relative('../../birth_year')} 
     output = "empty" if output.empty? 
     expect(output.match?(/Wow, you were born in #{year}. You're old!/i)).to be(true),
       "Expected output to be 'How old are you?\\nWow, you were born in #{year}. You're old!', but was #{output}."
@@ -30,16 +30,16 @@ describe "integer_birth_year.rb" do
   end
 end
 
-describe "integer_birth_year.rb" do
+describe "birth_year.rb" do
   it "should output 'Wow, you were born in #{Date.today.year - 20}. You're old!' if the input is 20.", points: 1 do
-    # Un-require integer_birth_year.rb
-    integer_birth_year = $".select{|r| r.include? 'integer_birth_year.rb'}
-    $".delete(integer_birth_year.first)
+    # Un-require birth_year.rb
+    birth_year = $".select{|r| r.include? 'birth_year.rb'}
+    $".delete(birth_year.first)
 
     allow_any_instance_of(Object).to receive(:gets).and_return("20")
     year = Date.today.year - 20
 
-    output = with_captured_stdout { require_relative('../../integer_birth_year')} 
+    output = with_captured_stdout { require_relative('../../birth_year')} 
     output = "empty" if output.empty? 
     expect(output.match?(/Wow, you were born in #{year}. You're old!/i)).to be(true),
       "Expected output to be 'How old are you?\\nWow, you were born in #{year}. You're old!', but was #{output}."

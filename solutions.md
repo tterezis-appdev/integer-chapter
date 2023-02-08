@@ -13,3 +13,10 @@ p "Wow, you were born in #{year}. You're old!"
 ```ruby
 p days_in_year % 7
 ```
+
+## odd.rb
+
+```ruby
+number = gets.chomp.to_i
+p number.odd?
+```

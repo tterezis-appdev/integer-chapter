@@ -1,12 +1,22 @@
-# Ask for a person’s age.
-# Using the Date class and the current year, calculate and display what year they were born in.
+# First, ask for a person’s age.
+# Then, using the Date class, figure out the current year.
+# Then subtract the person's age from the current year and display the approximate year they were born in.
+# Note that we're not taking specific birthdays into account, so the year might be off.
 # 
 # Ex:
-# 
-# Input:
+#
+# Assuming that the current year is 2023,
+#
+# If the person types:
 #   80
-# 
-# Key output (assuming the current year is 2023): 
-# "Wow, you were born in 1943. You're old!"
+#
+# Then the output should be:
+# "Nice! You were born in approximately 1943."
+#
+# If the person types:
+#   10
+#
+# Then the output should be:
+# "Nice! You were born in approximately 2013."
 
 p "How old are you?"

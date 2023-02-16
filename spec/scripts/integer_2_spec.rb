@@ -17,21 +17,21 @@ describe "integer_odd.rb" do
 end
 
 describe "integer_birth_year.rb" do
-  it "should output 'Wow, you were born in #{Date.today.year - 80}. You're old!' if the input is 80.", points: 1 do
+  it "should output 'Nice! You were born in approximately #{Date.today.year - 80}.' if the input is 80.", points: 1 do
 
     allow_any_instance_of(Object).to receive(:gets).and_return("80")
     year = Date.today.year - 80
 
     output = with_captured_stdout { require_relative('../../integer_birth_year')} 
     output = "empty" if output.empty? 
-    expect(output.match?(/Wow, you were born in #{year}. You're old!/i)).to be(true),
-      "Expected output to be 'How old are you?\\nWow, you were born in #{year}. You're old!', but was #{output}."
+    expect(output.match?(/Nice! You were born in approximately #{year}./i)).to be(true),
+      "Expected output to contain 'Nice! You were born in approximately #{year}.'. Your output was \n\n#{output}"
 
   end
 end
 
 describe "integer_birth_year.rb" do
-  it "should output 'Wow, you were born in #{Date.today.year - 20}. You're old!' if the input is 20.", points: 1 do
+  it "should output 'Nice! You were born in approximately #{Date.today.year - 20}.' if the input is 20.", points: 1 do
     # Un-require integer_birth_year.rb
     integer_birth_year = $".select{|r| r.include? 'integer_birth_year.rb'}
     $".delete(integer_birth_year.first)
@@ -41,8 +41,8 @@ describe "integer_birth_year.rb" do
 
     output = with_captured_stdout { require_relative('../../integer_birth_year')} 
     output = "empty" if output.empty? 
-    expect(output.match?(/Wow, you were born in #{year}. You're old!/i)).to be(true),
-      "Expected output to be 'How old are you?\\nWow, you were born in #{year}. You're old!', but was #{output}."
+    expect(output.match?(/Nice! You were born in approximately #{year}./i)).to be(true),
+      "Expected output to contain 'Nice! You were born in approximately #{year}.'. Your output was \n\n#{output}"
 
   end
 end

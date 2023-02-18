@@ -39,12 +39,15 @@ false
 
 ## integer_birth_year.rb
 
-Ask for a person’s age, and then calculate and display what year they were born in.
+First, ask for a person's age. Whatever they type, store it. Then, subtract the person's age from the current year and display the approximate year they were born in.
+
+Note that we're not taking specific birthdays into account, so the year might be off.
+
 
 Input:
 `80`
 
-Key output:
+Key output (assuming the year is 2020):
 "Wow, you were born in 1940. You're old!"
 
 Complete input and output example:

@@ -1,6 +1,6 @@
 # First, ask for a person’s age.
 # Whatever they type, store it.
-# Then, using the Date class, figure out the current year.
+# Then, figure out the current year. You can (but don't have to) use the Date class to determine the year today.
 # Then subtract the person's age from the current year and display the approximate year they were born in.
 # Note that we're not taking specific birthdays into account, so the year might be off.
 # 

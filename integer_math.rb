@@ -3,4 +3,4 @@
 # Your output should be a number; for example,
 # 
 # 4
-
+p (365).remainder(7)

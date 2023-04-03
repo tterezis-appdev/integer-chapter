@@ -9,4 +9,7 @@
 #   12
 #   false
 
-p "Enter an odd number:"
+#p "Enter an odd number:"
+puts "Enter an odd number:"
+num1=gets.chomp.to_i
+p num1.odd?
